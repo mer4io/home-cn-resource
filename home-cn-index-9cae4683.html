@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>开云 · 产品说明</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f5fafb;
+            color: #1b2e35;
+            line-height: 1.65;
+            padding: 1.5rem;
+            min-height: 100vh;
+        }
+        .page {
+            max-width: 1120px;
+            margin: 0 auto;
+        }
+
+        /* 导航 / 卡片网格布局 */
+        .hero {
+            text-align: center;
+            padding: 3rem 0 1.5rem;
+        }
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            color: #116466;
+        }
+        .hero .sub {
+            color: #3a6b72;
+            margin-top: 0.5rem;
+            font-size: 1.1rem;
+            max-width: 580px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin: 2.5rem 0;
+        }
+
+        .card {
+            background: white;
+            border-radius: 24px;
+            padding: 1.8rem 1.6rem;
+            box-shadow: 0 4px 12px rgba(0,40,45,0.04);
+            border: 1px solid #d8e9ed;
+            transition: box-shadow 0.2s;
+        }
+        .card:hover {
+            box-shadow: 0 8px 20px rgba(0,70,80,0.06);
+        }
+        .card .icon {
+            display: inline-block;
+            width: 42px;
+            height: 42px;
+            background: #e0f0f2;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 42px;
+            font-size: 1.3rem;
+            color: #116466;
+            margin-bottom: 0.6rem;
+        }
+        .card h3 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #14565c;
+            margin: 0.5rem 0 0.4rem;
+        }
+        .card p, .card li {
+            color: #2a464d;
+            font-size: 0.98rem;
+        }
+        .card ul {
+            padding-left: 1.1rem;
+            margin: 0.3rem 0;
+        }
+        .card li {
+            margin-bottom: 0.25rem;
+        }
+        .card .badge {
+            display: inline-block;
+            background: #d1e9ed;
+            color: #0e565e;
+            font-size: 0.75rem;
+            padding: 0.2rem 0.7rem;
+            border-radius: 30px;
+            margin-top: 0.3rem;
+        }
+
+        .link-sentence {
+            background: white;
+            padding: 2rem 1.8rem;
+            border-radius: 24px;
+            border: 1px solid #d8e9ed;
+            margin: 2rem 0;
+            font-size: 1.1rem;
+            color: #1b3b40;
+        }
+        .link-sentence a {
+            color: #0b6b75;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 2px solid #b3d9de;
+            transition: border-color 0.2s;
+        }
+        .link-sentence a:hover {
+            border-bottom-color: #0b6b75;
+        }
+
+        .faq-mini {
+            margin-top: 2.5rem;
+        }
+        .faq-mini details {
+            background: white;
+            border-radius: 18px;
+            padding: 1rem 1.5rem;
+            margin-bottom: 0.8rem;
+            border: 1px solid #d8e9ed;
+            cursor: pointer;
+        }
+        .faq-mini summary {
+            font-weight: 500;
+            color: #116466;
+            outline: none;
+        }
+        .faq-mini details p {
+            margin-top: 0.6rem;
+            color: #2f4b52;
+            font-size: 0.95rem;
+        }
+
+        .footnote {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #5d7e85;
+            padding: 2rem 0 0.5rem;
+            border-top: 1px solid #cde2e6;
+            margin-top: 2.5rem;
+        }
+
+        @media (min-width: 640px) {
+            .grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (min-width: 900px) {
+            .grid {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            body { padding: 2rem 3rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+
+        <div class="hero">
+            <h1>开云 · 稳定入口与页面说明</h1>
+            <div class="sub">
+                一份关于产品定位、使用场景与边界提示的叙述型索引
+            </div>
+        </div>
+
+        <!-- 卡片网格：摘要+亮点+使用建议 -->
+        <div class="grid">
+
+            <div class="card">
+                <div class="icon">📘</div>
+                <h3>摘要</h3>
+                <p><strong>开云</strong> 是一个轻量、可依赖的线上服务页面，旨在提供相对稳定的信息聚合与导航体验。它不强调复杂功能堆叠，而是围绕清晰的结构和可访问性来组织内容。无论是日常参考还是快速定位资源，这个页面都可以作为一个安静的起点。</p>
+                <div class="badge">持续维护 · 结构克制</div>
+            </div>
+
+            <div class="card">
+                <div class="icon">✨</div>
+                <h3>值得关注的亮点</h3>
+                <ul>
+                    <li>页面层级扁平，减少认知负担</li>
+                    <li>适配主流移动设备与桌面浏览器</li>
+                    <li>无冗余脚本，加载轻量</li>
+                    <li>配色以蓝绿色为基底，视觉温和</li>
+                    <li>入口内容保持稳定，不易频繁变动</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="icon">🧭</div>
+                <h3>使用建议</h3>
+                <p>建议将页面设为浏览器常驻标签或移动设备主屏快捷方式。日常使用时可根据自身节奏逐步浏览卡片内容，不急于一次读完。对于需要反复查阅的条目，可利用页面自带的锚定结构快速定位。保持浏览器版本更新可提升体验。</p>
+            </div>
+
+        </div>
+
+        <!-- 嵌入链接的自然句子 (a标签可见文本=开云) -->
+        <div class="link-sentence">
+            <p>如果你正在寻找一个风格稳定、信息组织清晰的页面，不妨将 <a href="https://home-cn-ky.com">开云</a> 加入收藏夹。它适合作为日常浏览中的一个安静锚点，既不喧哗，也不干扰你的主要工作流。</p>
+        </div>
+
+        <!-- 可信但克制的访问说明 + 场景提示 混合卡片 -->
+        <div style="display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin: 1.5rem 0;">
+            <div class="card" style="background: #f2fafc;">
+                <div class="icon">🛡️</div>
+                <h3>关于访问的可信说明</h3>
+                <p>页面部署在标准 HTTPS 环境下，资源引用保持最小化。我们不记录隐私敏感信息，也无意通过夸张引导刺激点击。所有可见内容均经过基本校验与整理，但建议使用者根据自身判断进一步核实细节。</p>
+                <p style="margin-top: 0.6rem;">访问时如遇加载异常，可尝试刷新或稍后再试。网络环境与终端差异可能影响部分样式渲染，属正常现象。</p>
+            </div>
+        </div>
+
+        <!-- FAQ 摘要 (两三个克制问题) -->
+        <div class="faq-mini">
+            <details>
+                <summary>页面内容多久更新一次？</summary>
+                <p>没有固定更新周期，通常在有实质性改进或信息需要修正时才发布变更。日常以小幅度优化为主。</p>
+            </details>
+            <details>
+                <summary>是否可以开源自建类似的页面？</summary>
+                <p>页面基于常规前端技术构建，没有特殊授权限制。如果你希望模仿其简约风格，完全可以参考结构与配色，但建议根据自己的内容调整。</p>
+            </details>
+            <details>
+                <summary>移动端显示效果如何？</summary>
+                <p>经过基础适配测试，在主流移动浏览器上卡片会自动调整为一列布局，文字与间距均针对小屏优化。不足 320px 宽度的设备可能出现轻微折行，但不影响核心功能。</p>
+            </details>
+        </div>
+
+        <div class="footnote">
+            <span>产品说明页 · 版本参考 2025</span>
+        </div>
+
+    </div>
+</body>
+</html>
