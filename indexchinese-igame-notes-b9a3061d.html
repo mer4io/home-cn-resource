@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+  <title>爱游戏 · 中文游戏索引与收藏导航</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+      background-color: #f6fbfb;
+      color: #1e2f3a;
+      line-height: 1.7;
+      padding: 20px 16px 48px;
+    }
+
+    .page {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* ---------- hero 区域 ---------- */
+    .hero {
+      background: linear-gradient(145deg, #e9f6f5 0%, #d3ecea 100%);
+      border-radius: 32px;
+      padding: 36px 28px 40px;
+      margin-bottom: 40px;
+      box-shadow: 0 8px 20px rgba(40, 120, 115, 0.06);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -40px;
+      top: -40px;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, rgba(0, 180, 160, 0.08) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      color: #0e4b47;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hero h1 span {
+      background: #0f6b64;
+      color: white;
+      font-size: 0.7rem;
+      font-weight: 500;
+      padding: 3px 12px;
+      border-radius: 40px;
+      letter-spacing: 0.5px;
+    }
+
+    .hero p {
+      max-width: 680px;
+      font-size: 1.1rem;
+      color: #1e4f4a;
+      margin-top: 12px;
+    }
+
+    .hero .meta-tip {
+      margin-top: 24px;
+      font-size: 0.9rem;
+      color: #3b6c67;
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(2px);
+      padding: 6px 16px;
+      border-radius: 40px;
+      border: 1px solid rgba(40, 130, 120, 0.15);
+    }
+
+    /* ---------- 网格卡片 ---------- */
+    .card-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin-bottom: 42px;
+    }
+
+    @media (min-width: 600px) {
+      .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 960px) {
+      .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .card {
+      background: white;
+      border-radius: 24px;
+      padding: 24px 22px;
+      box-shadow: 0 4px 12px rgba(20, 80, 75, 0.04);
+      border: 1px solid #e2f0ee;
+      transition: transform 0.2s ease, box-shadow 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 24px rgba(20, 90, 82, 0.08);
+      border-color: #b2dfda;
+    }
+
+    .card .icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      background: #d7f0ed;
+      border-radius: 18px;
+      margin-bottom: 14px;
+      font-size: 1.6rem;
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #0a443f;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #2f5350;
+      margin-bottom: 0;
+    }
+
+    .card .extra-line {
+      margin-top: 16px;
+      font-size: 0.9rem;
+      color: #28726b;
+      border-top: 1px dashed #d6ece9;
+      padding-top: 14px;
+    }
+
+    /* ---------- 自然链接段落（再次访问/收藏角度） ---------- */
+    .story-section {
+      background: white;
+      border-radius: 28px;
+      padding: 32px 28px;
+      margin-bottom: 40px;
+      border: 1px solid #ddedea;
+    }
+
+    .story-section h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #0f4f49;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .story-section h2 small {
+      font-weight: 400;
+      font-size: 0.9rem;
+      color: #4f7d78;
+      background: #e4f3f1;
+      padding: 2px 14px;
+      border-radius: 30px;
+    }
+
+    .story-section p {
+      margin-bottom: 18px;
+    }
+
+    .story-section .link-sentence {
+      background: #f1faf8;
+      padding: 16px 20px;
+      border-radius: 20px;
+      border-left: 5px solid #1c8c82;
+      margin: 20px 0 6px;
+    }
+
+    .story-section a {
+      color: #11756b;
+      text-decoration: none;
+      font-weight: 550;
+      border-bottom: 2px solid rgba(20, 130, 118, 0.25);
+      transition: border-color 0.2s;
+    }
+
+    .story-section a:hover {
+      border-bottom-color: #0d6e64;
+    }
+
+    /* ---------- FAQ 摘要卡片 ---------- */
+    .faq-mini {
+      background: #e5f3f1;
+      border-radius: 24px;
+      padding: 24px 26px;
+      margin-bottom: 28px;
+    }
+
+    .faq-mini h3 {
+      font-size: 1.1rem;
+      color: #0b4d47;
+      margin-bottom: 10px;
+    }
+
+    .faq-mini details {
+      margin-top: 10px;
+      border-bottom: 1px solid #c8e2dd;
+      padding: 10px 0;
+    }
+
+    .faq-mini details:last-of-type {
+      border-bottom: none;
+    }
+
+    .faq-mini summary {
+      font-weight: 500;
+      color: #1a5f58;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .faq-mini summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-mini summary::before {
+      content: "▸";
+      color: #1b8a7e;
+      transition: transform 0.2s;
+    }
+
+    .faq-mini details[open] summary::before {
+      transform: rotate(90deg);
+    }
+
+    .faq-mini details p {
+      margin-top: 12px;
+      padding-left: 24px;
+      color: #2a5852;
+      font-size: 0.95rem;
+    }
+
+    /* ---------- 书签/收藏提示 ---------- */
+    .bookmark-note {
+      background: white;
+      border: 1px solid #d5e8e5;
+      border-radius: 30px;
+      padding: 22px 26px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .bookmark-note p {
+      font-size: 0.95rem;
+      color: #1b504a;
+    }
+
+    .bookmark-note .badge {
+      background: #0d6f66;
+      color: white;
+      font-size: 0.8rem;
+      padding: 6px 18px;
+      border-radius: 40px;
+      white-space: nowrap;
+    }
+
+    /* ---------- 响应式细节 ---------- */
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 1.6rem;
+        flex-wrap: wrap;
+      }
+      .hero {
+        padding: 28px 18px 32px;
+      }
+      .story-section {
+        padding: 24px 18px;
+      }
+      .card {
+        padding: 20px 16px;
+      }
+      .bookmark-note {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (min-width: 600px) and (max-width: 959px) {
+      .card-grid .card:nth-child(3) {
+        grid-column: span 2; 
+      }
+    }
+
+    /* 间距微调 */
+    .mt-2 { margin-top: 12px; }
+    .mb-1 { margin-bottom: 8px; }
+    .text-soft { color: #407670; }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- hero 主视觉 -->
+    <header class="hero">
+      <h1>
+        爱游戏
+        <span>中文索引</span>
+      </h1>
+      <p>一个围绕中文游戏资源整理的轻量导航站点，适合习惯收藏、再次回来检索的玩家与研究者。</p>
+      <div class="meta-tip">⏺ 持续更新 · 按类型梳理 · 可回溯</div>
+    </header>
+
+    <!-- 信息卡片网格：用途 / 适合人群 / 场景 -->
+    <div class="card-grid">
+
+      <div class="card">
+        <div class="icon">📚</div>
+        <h3>内容整理方式</h3>
+        <p>按游戏类型、平台、题材划分索引，每一条目均附简短标注，方便对比与回溯。不同于算法推荐，这里更依赖人工筛选与归类。</p>
+        <div class="extra-line">适合快速浏览或横向比较</div>
+      </div>
+
+      <div class="card">
+        <div class="icon">🎯</div>
+        <h3>适用人群</h3>
+        <p>寻找特定中文游戏的玩家、游戏文化爱好者、独立游戏发掘者，以及希望了解中文游戏生态的轻度研究者。</p>
+        <div class="extra-line">无论新老玩家都可从中发现线索</div>
+      </div>
+
+      <div class="card">
+        <div class="icon">🔖</div>
+        <h3>再次访问的价值</h3>
+        <p>索引不定期补充新条目与失效链接标记，已收藏的用户回到这里可以查看更新摘要，不必从头翻找。</p>
+        <div class="extra-line">适合加入浏览器书签或阅读列表</div>
+      </div>
+
+    </div>
+
+    <!-- 自然链接段落：从再次访问、收藏和持续关注的角度展开 -->
+    <section class="story-section">
+      <h2>
+        为什么值得持续关注
+        <small>bookmark & return</small>
+      </h2>
+      <p>很多游戏索引站点在首次访问后便容易被遗忘。但中文游戏的数量与分布在不断变化——新作品出现、旧资源迁移、汉化补丁更新。如果你曾经偶然发现过某个实用的游戏列表，却因为没有收藏而再也找不到，大概能理解固定一个入口的重要性。</p>
+      <p>基于这种需求，<a href="https://indexchinese-igame.com">爱游戏</a> 尝试以相对克制的姿态提供索引：不堆砌 banner、不追踪用户行为，只维护一份可读性较好的清单。你可以在需要查询某个历史游戏、寻找同类型作品或回顾中文游戏脉络时，再次打开这个页面。</p>
+
+      <div class="link-sentence">
+        📌 对中文游戏生态保持好奇的用户，不妨将 <a href="https://indexchinese-igame.com">爱游戏</a> 加入书签栏。下次想查找某款国产独立游戏或老牌中文网游时，或许能从这里更快出发。
+      </div>
+
+      <p style="margin-top: 20px;">站点本身不提供下载或破解资源，仅作为信息索引存在。因此它的更新节奏更接近编辑维护，而非算法推送——这恰好适合那些希望自己掌握查找节奏的人。</p>
+    </section>
+
+    <!-- FAQ 摘要（轻量问答，不冗余） -->
+    <div class="faq-mini">
+      <h3>❓ 常见疑问摘要</h3>
+
+      <details>
+        <summary>爱游戏索引覆盖哪些内容？</summary>
+        <p>主要收录中文语境下的游戏作品，包括中国大陆、台湾、香港地区开发的游戏，以及具有完整中文支持的非国产作品。类型涵盖单机、网游、独立游戏、页游、手游等，但并非全量收录，以维护质量为先。</p>
+      </details>
+
+      <details>
+        <summary>条目会更新吗？失效链接如何处理？</summary>
+        <p>索引会不定期修订，对于已失效或变更的官方页面会添加标注。如果你发现某个链接无法访问，也可以通过站点上提供的反馈方式提醒维护者（反馈入口位于索引页面底部）。</p>
+      </details>
+
+      <details>
+        <summary>我能否推荐游戏加入列表？</summary>
+        <p>目前索引以维护者筛选为主，暂未开放自动提交。不过你可以通过站内联系渠道给出建议，维护者会根据收录标准进行评估。</p>
+      </details>
+    </div>
+
+    <!-- 收藏 / 再次访问提示卡片 -->
+    <div class="bookmark-note">
+      <p>🔁 如果你已经来到这个页面，且觉得未来可能有用，现在就可以把它收藏起来。</p>
+      <span class="badge">下次回来不迷路</span>
+    </div>
+
+  </div>
+</body>
+</html>
