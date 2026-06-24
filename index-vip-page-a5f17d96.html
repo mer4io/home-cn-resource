@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱游戏 · 知识资料索引</title>
+    <style>
+        /* 极简留白 · 窄正文 · 清晰层级 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #fafaf9;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans SC', sans-serif;
+            color: #1e1e1e;
+            line-height: 1.7;
+            padding: 2.4rem 1.2rem;
+        }
+
+        .page {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 0.5rem;
+        }
+
+        /* 标题层级 */
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 540;
+            letter-spacing: -0.01em;
+            margin-bottom: 0.4rem;
+            color: #111;
+            line-height: 1.2;
+        }
+
+        .subhead {
+            font-size: 1rem;
+            color: #6b6b6b;
+            margin-bottom: 2.8rem;
+            border-left: 3px solid #cfcfcf;
+            padding-left: 1rem;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            font-weight: 520;
+            margin-top: 2.6rem;
+            margin-bottom: 0.85rem;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 0.3rem;
+            color: #1a1a1a;
+        }
+
+        h3 {
+            font-size: 1.05rem;
+            font-weight: 520;
+            margin-top: 1.5rem;
+            margin-bottom: 0.4rem;
+            color: #2b2b2b;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        a {
+            color: #1f5b8a;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(31, 91, 138, 0.25);
+            transition: border-color 0.2s;
+        }
+
+        a:hover {
+            border-bottom-color: #1f5b8a;
+        }
+
+        /* 卡片风格的模块区 */
+        .card-set {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1.8rem 0 0.8rem;
+        }
+
+        .card-item {
+            flex: 1 1 180px;
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 1.2rem 1rem 0.9rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.03), 0 0 0 1px rgba(0,0,0,0.02);
+        }
+
+        .card-item strong {
+            display: block;
+            font-weight: 520;
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+            color: #111;
+        }
+
+        .card-item span {
+            font-size: 0.9rem;
+            color: #5a5a5a;
+        }
+
+        .info-panel {
+            background: #f5f3f0;
+            border-radius: 14px;
+            padding: 1.4rem 1.3rem;
+            margin: 2rem 0 1.2rem;
+        }
+
+        .info-panel p {
+            margin-bottom: 0.2rem;
+        }
+
+        .faq-block {
+            margin-top: 2rem;
+            padding-top: 0.6rem;
+        }
+
+        .faq-item {
+            padding: 0.65rem 0;
+            border-bottom: 1px dashed #dcdcdc;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-q {
+            font-weight: 500;
+            margin-bottom: 0.2rem;
+            color: #222;
+        }
+
+        .faq-a {
+            color: #4a4a4a;
+            font-size: 0.95rem;
+            margin-left: 0.6rem;
+        }
+
+        .note {
+            background: #f0ede9;
+            border-radius: 10px;
+            padding: 1.2rem 1.2rem 0.9rem;
+            margin-top: 2.2rem;
+            font-size: 0.93rem;
+            color: #3f3f3f;
+        }
+
+        .meta-line {
+            font-size: 0.85rem;
+            color: #8a8a8a;
+            margin-top: 2.8rem;
+            border-top: 1px solid #e2e2e2;
+            padding-top: 1.2rem;
+        }
+
+        @media (max-width: 500px) {
+            body {
+                padding: 1.5rem 0.8rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            .card-set {
+                flex-direction: column;
+            }
+            .card-item {
+                flex: 1 1 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <h1>爱游戏 · 资料索引</h1>
+    <div class="subhead">信息整理 / 分类标签 / 知识库入口</div>
+
+    <p>
+        从素材归档与信息索引的角度来看，<a href="https://index-vip-igame.com">爱游戏</a> 
+        汇集了多个维度的游戏资料、版本记录与内容说明。以下整理了几类常见信息区间，便于快速定位和查阅。
+    </p>
+
+    <!-- 目录感卡片区 -->
+    <h2>📂 信息分区与目录结构</h2>
+    <div class="card-set">
+        <div class="card-item">
+            <strong>游戏版本</strong>
+            <span>更新日志 · 号段说明 · 客户端差异记录</span>
+        </div>
+        <div class="card-item">
+            <strong>功能索引</strong>
+            <span>模块分类 · 界面引导 · 权限清单</span>
+        </div>
+        <div class="card-item">
+            <strong>内容记录</strong>
+            <span>活动列表 · 奖池档案 · 历史变更</span>
+        </div>
+    </div>
+
+    <!-- 说明区：资料整理角度 -->
+    <h2>📋 说明区</h2>
+    <p>
+        本索引围绕常用资料入口搭建，内容以客观罗列为主。每一部分均可进一步展开为子条目，适合维护者或使用者快速对照。
+        例如版本分区中保存了从早期到当前的迭代信息，而功能索引则按模块列出参数与配置方式。
+    </p>
+    <p>
+        对于需要查阅具体记录的使用者，建议优先参考分类标签，再定位到对应条目。
+        若遇到信息缺失或需要补充，可参照已有结构进行归档。
+    </p>
+
+    <!-- 提示区 -->
+    <div class="info-panel">
+        <p><strong>📌 提示</strong></p>
+        <p>· 部分资料按日期排序，建议关注近三个月的更新标记。</p>
+        <p>· 功能索引中带有「预览」标志的条目为近期调整内容。</p>
+        <p>· 若需检索特定关键词，可在页面内使用浏览器的查找功能。</p>
+    </div>
+
+    <!-- 相关信息区 + FAQ 摘要 -->
+    <h2>🔗 相关信息与常见索引</h2>
+    <p>
+        以下列出使用过程中常被问及的信息片段，以 FAQ 摘要形式呈现。
+        完整说明请参考对应分类下的详细记录。
+    </p>
+
+    <div class="faq-block">
+        <div class="faq-item">
+            <div class="faq-q">Q：如何快速定位某个版本号的说明？</div>
+            <div class="faq-a">A：可在「游戏版本」分区按数字序列查找，或使用页面搜索功能输入版本号。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">Q：资料索引多久更新一次？</div>
+            <div class="faq-a">A：通常随内容变动同步调整，建议以页面标注的更新日期为准。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">Q：是否提供历史版本对比？</div>
+            <div class="faq-a">A：部分模块保留了迭代备注，可对照阅读。</div>
+        </div>
+    </div>
+
+    <!-- 自然嵌入链接的句子 -->
+    <p style="margin-top: 1.8rem;">
+        若需直接浏览主站资料，可使用 <a href="https://index-vip-igame.com">爱游戏</a> 作为起始页面，其中包含上述分区对应的完整内容。
+    </p>
+
+    <!-- 额外知识块 -->
+    <div class="note">
+        <p><strong>📎 关于资料组织</strong></p>
+        <p>本索引采用扁平化分类，减少层级深度，方便快速跳转。所有条目均以客观记录为主，不包含主观评价。建议搭配页面内锚点或书签使用。</p>
+        <p style="margin-top: 0.3rem; font-size: 0.88rem;">更新策略：增量补充，定期复核。</p>
+    </div>
+
+    <div class="meta-line">
+        <span>信息索引 · 版本 2025-04 · 仅作参考</span>
+    </div>
+
+</div>
+</body>
+</html>
